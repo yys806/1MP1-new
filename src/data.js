@@ -224,6 +224,7 @@ export const PROJECTS = [
     links: [
       { label: 'Website', url: 'https://2352396.de5.net' },
       { label: 'GitHub', url: 'https://github.com/yys806/research-helper' },
+      { label: '软著证书 Copyright', url: 'https://pub-fae7c18af59f40679cbe76ee23a170c8.r2.dev/%E8%8E%B7%E5%A5%96/%E8%BD%AF%E8%91%97/mathsnap.pdf' },
     ],
     en: {
       excerpt: 'A multimodal paper-reading platform: close reading, structured notes, and formula recognition from screenshots.',
@@ -270,6 +271,7 @@ export const PROJECTS = [
     links: [
       { label: 'Website', url: 'https://fpga.de5.net' },
       { label: 'GitHub', url: 'https://github.com/yys806/Divination' },
+      { label: '软著证书 Copyright', url: 'https://pub-fae7c18af59f40679cbe76ee23a170c8.r2.dev/%E8%8E%B7%E5%A5%96/%E8%BD%AF%E8%91%97/CYBERORACLE.pdf' },
     ],
     en: {
       excerpt: 'AI fortune simulation & counseling assistant across interactive divination scenarios.',
@@ -647,7 +649,10 @@ export const PROJECTS = [
     details: '基于小智 ESP32 方案搭建的 AI 语音伙伴：MCP 协议接入大模型，支持连续对话与角色设定，软硬一体。',
     tags: ['ESP32', 'MCP', '语音'],
     image: 'assets/img/projects-unified/小智AI聊天机器人.webp',
-    links: [{ label: '官网 Website', url: 'https://xiaozhi.me' }],
+    links: [
+      { label: '官网 Website', url: 'https://xiaozhi.me' },
+      { label: '上游 Upstream', url: 'https://github.com/78/xiaozhi-esp32' },
+    ],
     en: {
       excerpt: 'An MCP-based AI voice companion on ESP32.',
       details: 'An AI voice companion built on the XiaoZhi ESP32 stack: LLM access over MCP, continuous conversation, and persona settings.',
