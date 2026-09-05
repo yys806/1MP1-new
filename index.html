@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#060608" />
+    <title>禹尧珅 · SHEN-OS — AI 研究者 / 工程师</title>
+    <meta name="description" content="禹尧珅 (Yaoshen Yu) — 同济大学人工智能本科生。混合自主交通生成、VLM 评测、世界模型与产品化软件。" />
+    <meta property="og:title" content="禹尧珅 · SHEN-OS" />
+    <meta property="og:description" content="在混合自主交通、世界模型与多模态评测的交叉处，造有用的东西。" />
+    <meta property="og:image" content="https://shen-intro.de5.net/assets/img/profile.webp" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "禹尧珅",
+        "alternateName": "Yaoshen Yu",
+        "url": "https://shen-intro.de5.net/",
+        "email": "mailto:2352396@tongji.edu.cn",
+        "jobTitle": "AI Undergraduate Researcher",
+        "affiliation": { "@type": "CollegeOrUniversity", "name": "Tongji University" },
+        "sameAs": ["https://github.com/yys806", "https://yys806.github.io/", "https://shen806.de5.net/"],
+        "knowsAbout": ["Mixed-Autonomy Traffic Generation", "VLM Evaluation", "World Models", "Diffusion Models", "Embedded Systems"]
+      }
+    </script>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23060608'/%3E%3Crect x='2' y='2' width='60' height='60' rx='12' fill='none' stroke='%233dff88' stroke-width='2.5'/%3E%3Cpath d='M16 22l12 10-12 10' fill='none' stroke='%233dff88' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Crect x='34' y='40' width='16' height='5' rx='2.5' fill='%233dff88'/%3E%3C/svg%3E" />
+  </head>
+  <body data-theme="dark">
+
+    <!-- ============ BOOT 启动序列 ============ -->
+    <div id="boot" aria-hidden="true">
+      <div class="boot-inner">
+        <pre class="boot-logo" aria-hidden="true">
+ ███████╗██╗  ██╗███████╗███╗   ██╗     ██████╗ ███████╗
+ ██╔════╝██║  ██║██╔════╝████╗  ██║    ██╔═══██╗██╔════╝
+ ███████╗███████║█████╗  ██╔██╗ ██║    ██║   ██║███████╗
+ ╚════██║██╔══██║██╔══╝  ██║╚██╗██║    ██║   ██║╚════██║
+ ███████║██║  ██║███████╗██║ ╚████║    ╚██████╔╝███████║
+ ╚══════╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═══╝     ╚═════╝ ╚══════╝</pre>
+        <div class="boot-lines" id="boot-lines"></div>
+        <div class="boot-bar"><span id="boot-bar-fill"></span></div>
+        <div class="boot-meta"><span id="boot-pct">0%</span><span>SHEN-OS v2.7.0</span><span id="boot-hint">CLICK TO SKIP</span></div>
+      </div>
+    </div>
+
+    <!-- 自定义光标 / 噪点 / 进度条 -->
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-ring" id="cursor-ring"></div>
+    <div class="noise" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <!-- ============ 导航 ============ -->
+    <header class="nav" id="nav">
+      <a class="nav-logo" href="#hero" data-magnet>
+        <span class="nav-logo-glyph">▮▯</span>
+        <span class="nav-logo-text">禹尧珅<em>/ yys806</em></span>
+      </a>
+      <nav class="nav-links" id="nav-links"></nav>
+      <div class="nav-status" id="nav-status">
+        <button class="lang-toggle mono" id="lang-toggle" title="切换语言 / Switch language" aria-label="切换语言">
+          <span class="lt-zh">中</span><span class="lt-sep">/</span><span class="lt-en">EN</span>
+        </button>
+        <span class="status-dot"></span>
+        <span class="status-text">ONLINE</span>
+        <span class="status-clock" id="nav-clock">--:--:--</span>
+      </div>
+    </header>
+
+    <main id="main">
+
+      <!-- ============ HERO ============ -->
+      <section class="hero" id="hero">
+        <canvas id="hero-canvas" aria-hidden="true"></canvas>
+        <div class="hero-frame" aria-hidden="true">
+          <span class="hero-corner tl"></span><span class="hero-corner tr"></span>
+          <span class="hero-corner bl"></span><span class="hero-corner br"></span>
+        </div>
+        <div class="hero-content">
+          <p class="hero-prompt mono"><span class="prompt-user">yys806@tongji</span>:<span class="prompt-path">~</span>$ <span class="typed" id="hero-typed"></span><span class="caret"></span></p>
+          <h1 class="hero-name" id="hero-name" aria-label="禹尧珅">
+            <span class="hn-char">禹</span><span class="hn-char">尧</span><span class="hn-char">珅</span>
+          </h1>
+          <div class="hero-name-en" aria-hidden="true"><span>YAOSHEN&nbsp;YU</span></div>
+          <p class="hero-tagline" id="hero-tagline" data-i18n-html="hero.tagline">在混合自主交通、世界模型与多模态评测的交叉处，<br />造有用的东西。</p>
+          <div class="hero-cta">
+            <a class="btn btn-solid" href="#research" data-magnet><span data-i18n="hero.cta1">进入内核</span><span class="btn-arrow">→</span></a>
+            <a class="btn btn-ghost" href="assets/files/yaoshen-yu-cv.pdf" target="_blank" rel="noopener" data-magnet><span data-i18n="hero.cta2">下载 CV</span><span class="btn-dl">↓</span></a>
+          </div>
+        </div>
+        <div class="hero-meta mono" aria-hidden="true">
+          <span class="hm-item" data-i18n-html="hero.m1">LOC · 上海 / 云南</span>
+          <span class="hm-item" data-i18n-html="hero.m2">ROLE · AI RESEARCHER</span>
+          <span class="hm-item" data-i18n-html="hero.m3">STATUS · <b class="green">UNDERGRAD@TONGJI</b></span>
+        </div>
+        <div class="hero-scroll mono" aria-hidden="true"><span>SCROLL</span><span class="scroll-line"><i></i></span><span>0 → 1</span></div>
+      </section>
+
+      <!-- ============ 跑马灯 ============ -->
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee-track" id="marquee-track"></div>
+      </div>
+
+      <!-- ============ 01 关于 ============ -->
+      <section class="section" id="about">
+        <header class="section-head">
+          <p class="section-eyebrow mono">SYS.01 // <span>ABOUT</span></p>
+          <h2 class="section-title"><span class="st-zh" data-i18n="about.title">关于</span><span class="st-en" data-i18n="about.sub">关于我的一切，皆可 build。</span></h2>
+        </header>
+        <div class="about-grid">
+          <div class="about-left" id="about-left">
+            <figure class="portrait" data-tilt id="portrait">
+              <div class="portrait-inner">
+                <img src="assets/img/profile.webp" alt="禹尧珅的照片" loading="eager" />
+                <div class="portrait-glare"></div>
+              </div>
+              <figcaption class="mono">FIG.01 — YAOSHEN.YU <b>@ Shanghai</b></figcaption>
+              <div class="portrait-deco mono" aria-hidden="true">
+                <span>▚ 1200×1680</span><span>ID: 2352396</span><span>AI.TONGJI</span>
+              </div>
+            </figure>
+          </div>
+          <div class="about-right">
+            <div class="whoami mono" id="whoami">
+              <div class="whoami-bar"><span class="wdot"></span><span class="wdot"></span><span class="wdot"></span><span class="whoami-title">whoami — zsh</span></div>
+              <p class="whoami-body"></p>
+            </div>
+            <p class="about-bio" id="about-bio"></p>
+            <ul class="facts" id="facts"></ul>
+            <div class="chips" id="interests"></div>
+          </div>
+        </div>
+        <div class="stats" id="stats"></div>
+      </section>
+
+      <!-- ============ 02 研究 ============ -->
+      <section class="section" id="research">
+        <header class="section-head">
+          <p class="section-eyebrow mono">SYS.02 // <span>RESEARCH</span></p>
+          <h2 class="section-title"><span class="st-zh" data-i18n="research.title">研究</span><span class="st-en" data-i18n="research.sub">把未知拆成可计算的问题。</span></h2>
+        </header>
+        <div class="research-list" id="research-list"></div>
+      </section>
+
+      <!-- ============ 03 项目 ============ -->
+      <section class="section section-bleed" id="projects">
+        <header class="section-head">
+          <p class="section-eyebrow mono">SYS.03 // <span>PROJECTS</span></p>
+          <h2 class="section-title"><span class="st-zh" data-i18n="projects.title">项目</span><span class="st-en" data-i18n="projects.sub">24 个工程——从论文代码到机器狗。</span></h2>
+        </header>
+
+        <!-- 精选横向画廊 -->
+        <div class="gallery" id="gallery">
+          <div class="gallery-head mono">
+            <span data-i18n-html="gallery.hint">// 左右拖动浏览精选 · 滚轮可直接下滑 FEATURED</span>
+            <span class="gallery-count"><b id="gallery-cur">01</b> / <span id="gallery-total">06</span></span>
+          </div>
+          <div class="gallery-scroller" id="gallery-scroller">
+            <div class="gallery-track" id="gallery-track"></div>
+          </div>
+          <div class="gallery-progress"><span id="gallery-progress-fill"></span></div>
+        </div>
+
+        <!-- 全部项目网格 -->
+        <div class="projects-block">
+          <div class="projects-toolbar">
+            <p class="mono projects-label" data-i18n-html="projects.label">// 完整索引 FULL INDEX — <span id="proj-total">24</span> RECORDS</p>
+            <div class="filters" id="filters"></div>
+          </div>
+          <div class="projects-grid" id="projects-grid"></div>
+        </div>
+      </section>
+
+      <!-- ============ 04 轨迹 ============ -->
+      <section class="section" id="journey">
+        <header class="section-head">
+          <p class="section-eyebrow mono">SYS.04 // <span>JOURNEY</span></p>
+          <h2 class="section-title"><span class="st-zh" data-i18n="journey.title">轨迹</span><span class="st-en" data-i18n="journey.sub">一条仍在编译的时间线。</span></h2>
+        </header>
+        <div class="journey-grid">
+          <div class="timeline" id="timeline"></div>
+          <aside class="honors">
+            <p class="mono honors-label">// HONORS.LOG — 荣誉与奖项</p>
+            <ul class="honors-list" id="honors-list"></ul>
+          </aside>
+        </div>
+      </section>
+
+      <!-- ============ 05 更新日志 ============ -->
+      <section class="section" id="changelog">
+        <header class="section-head">
+          <p class="section-eyebrow mono">SYS.05 // <span>CHANGELOG</span></p>
+          <h2 class="section-title"><span class="st-zh" data-i18n="changelog.title">更新日志</span><span class="st-en" data-i18n="changelog.sub">git log --oneline --life · 最新在上</span></h2>
+        </header>
+        <div class="gitlog" id="gitlog"></div>
+      </section>
+
+      <!-- ============ 06 联络 ============ -->
+      <section class="section contact" id="contact">
+        <canvas id="contact-canvas" aria-hidden="true"></canvas>
+        <header class="section-head">
+          <p class="section-eyebrow mono">SYS.06 // <span>CONTACT</span></p>
+          <h2 class="section-title"><span class="st-zh" data-i18n="contact.title">建立连接</span><span class="st-en" data-i18n="contact.sub">欢迎交流研究、合作或闲聊。</span></h2>
+        </header>
+        <div class="contact-cta">
+          <a class="contact-mail" href="mailto:2352396@tongji.edu.cn" data-magnet>
+            <span class="mono cm-label">SEND PACKET →</span>
+            <span class="cm-text">2352396@tongji.edu.cn</span>
+          </a>
+          <div class="contact-links" id="contact-links"></div>
+        </div>
+        <footer class="footer mono">
+          <div class="footer-grid">
+            <div class="footer-col">
+              <p class="f-title">// NAVIGATE</p>
+              <div id="footer-nav"></div>
+            </div>
+            <div class="footer-col">
+              <p class="f-title">// ELSEWHERE</p>
+              <a href="https://github.com/yys806" target="_blank" rel="noopener">GitHub ↗</a>
+              <a href="https://yys806.github.io/" target="_blank" rel="noopener">Blog ↗</a>
+              <a href="https://shen806.de5.net/" target="_blank" rel="noopener">Films ↗</a>
+            </div>
+            <div class="footer-col">
+              <p class="f-title">// SYSTEM</p>
+              <p>SHEN-OS v2.7.0</p>
+              <p>three.js · GSAP · Lenis</p>
+              <p>© 2026 禹尧珅 · Shanghai</p>
+            </div>
+          </div>
+          <p class="footer-sign" aria-hidden="true">while (alive) { learn(); build(); share(); }</p>
+        </footer>
+      </section>
+    </main>
+
+    <div id="modal-root"></div>
+    <div id="palette-root"></div>
+    <div id="toast-root"></div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

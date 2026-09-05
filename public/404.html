@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 · SEGMENTATION FAULT — SHEN-OS</title>
+  <meta name="robots" content="noindex" />
+  <style>
+    :root { --green:#3dff88; --txt:#f2f4f3; --txt3:rgba(242,244,243,.34); --mono:'JetBrains Mono',ui-monospace,'SF Mono',Consolas,monospace; }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { min-height:100svh; background:#060608; color:var(--txt); font-family:var(--mono); display:flex; align-items:center; justify-content:center; padding:24px; }
+    .wrap { width:min(680px,94vw); }
+    .code { font-size:clamp(64px,16vw,150px); font-weight:800; letter-spacing:.04em; color:transparent; -webkit-text-stroke:1.5px var(--green); text-shadow:0 0 40px rgba(61,255,136,.25); line-height:1; }
+    .sig { margin-top:22px; font-size:14px; line-height:2.1; color:rgba(242,244,243,.6); }
+    .sig b { color:var(--green); font-weight:500; }
+    .sig .dim { color:var(--txt3); }
+    .bar { height:2px; background:rgba(255,255,255,.08); margin-top:26px; overflow:hidden; position:relative; }
+    .bar i { position:absolute; inset:0; background:var(--green); transform-origin:0 50%; animation:scan 2.4s cubic-bezier(.65,.05,.36,1) infinite; }
+    @keyframes scan { 0%{transform:scaleX(0)} 60%{transform:scaleX(1)} 100%{transform:scaleX(1);opacity:0} }
+    .acts { display:flex; gap:14px; margin-top:30px; flex-wrap:wrap; }
+    .acts a { display:inline-flex; padding:13px 26px; border-radius:999px; border:1px solid rgba(255,255,255,.18); color:var(--txt); text-decoration:none; font-size:13px; letter-spacing:.06em; transition:.3s; }
+    .acts a.solid { background:var(--green); border-color:var(--green); color:#04120a; font-weight:600; }
+    .acts a:hover { border-color:var(--green); color:var(--green); }
+    .acts a.solid:hover { box-shadow:0 0 30px rgba(61,255,136,.4); color:#04120a; }
+    .core { margin-top:34px; font-size:11px; letter-spacing:.14em; color:var(--txt3); }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="code mono">404</div>
+    <div class="sig">
+      <b>SEGMENTATION FAULT</b> <span class="dim">at</span> 0x1MP1<br />
+      <span class="dim">#请求的页面不在本机内存中（可能从未存在，或已被回收）。</span><br />
+      <span class="dim">#The requested page is not mapped in this machine's memory.</span>
+    </div>
+    <div class="bar"><i></i></div>
+    <div class="acts">
+      <a class="solid" href="/">← 回到主页 / HOME</a>
+      <a href="https://github.com/yys806">GitHub ↗</a>
+    </div>
+    <p class="mono">SHEN-OS v2.7.0 · core dumped at 2352396@tongji.edu.cn</p>
+  </main>
+</body>
+</html>

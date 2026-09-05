@@ -1,0 +1,212 @@
+/* ============================================================
+   hero.css — 首屏 + 跑马灯
+   ============================================================ */
+
+.hero {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+#hero-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    radial-gradient(42% 34% at 50% 52%, rgba(6, 6, 8, 0.72), rgba(6, 6, 8, 0.25) 60%, transparent 78%),
+    radial-gradient(120% 90% at 50% 50%, transparent 40%, rgba(6, 6, 8, 0.75) 100%),
+    linear-gradient(to bottom, rgba(6, 6, 8, 0.5), transparent 22%, transparent 70%, rgba(6, 6, 8, 0.9));
+}
+
+/* 四角裁切标记 */
+.hero-frame {
+  position: absolute;
+  inset: clamp(18px, 3vw, 34px);
+  z-index: 2;
+  pointer-events: none;
+}
+.hero-corner {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  border: 0 solid rgba(255, 255, 255, 0.28);
+}
+.hero-corner.tl { top: 0; left: 0; border-top-width: 1px; border-left-width: 1px; }
+.hero-corner.tr { top: 0; right: 0; border-top-width: 1px; border-right-width: 1px; }
+.hero-corner.bl { bottom: 0; left: 0; border-bottom-width: 1px; border-left-width: 1px; }
+.hero-corner.br { bottom: 0; right: 0; border-bottom-width: 1px; border-right-width: 1px; }
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  padding: 0 20px;
+  transform: translateY(-2vh);
+}
+.hero-prompt {
+  font-size: clamp(12px, 1.6vw, 15px);
+  color: var(--txt-2);
+  margin-bottom: clamp(18px, 3vh, 34px);
+  min-height: 1.6em;
+}
+.prompt-user { color: var(--green); }
+.prompt-path { color: #6ab8ff; }
+.caret {
+  display: inline-block;
+  width: 9px;
+  height: 1.15em;
+  margin-left: 2px;
+  background: var(--green);
+  vertical-align: text-bottom;
+  animation: caret-blink 1s steps(2) infinite;
+}
+@keyframes caret-blink {
+  50% { opacity: 0; }
+}
+
+.hero-name {
+  font-weight: 900;
+  font-size: clamp(88px, 18vw, 224px);
+  line-height: 0.98;
+  letter-spacing: 0.04em;
+  display: flex;
+  justify-content: center;
+}
+.hn-char {
+  display: inline-block;
+  background: linear-gradient(180deg, #ffffff 30%, #b9d9c4 78%, #7d9c88);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 6px 40px rgba(61, 255, 136, 0.16));
+}
+.hero-name-en {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+.hero-name-en span {
+  font-family: var(--font-disp);
+  font-weight: 700;
+  font-size: clamp(46px, 8.6vw, 118px);
+  letter-spacing: 0.22em;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
+  white-space: nowrap;
+}
+
+.hero-tagline {
+  margin: clamp(20px, 3.4vh, 34px) auto 0;
+  max-width: 640px;
+  font-size: clamp(15px, 1.9vw, 18.5px);
+  color: var(--txt-2);
+  font-weight: 350;
+}
+.hero-cta {
+  margin-top: clamp(28px, 4.6vh, 46px);
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.hero-meta {
+  position: absolute;
+  left: clamp(22px, 4vw, 52px);
+  bottom: clamp(24px, 4vh, 44px);
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  color: var(--txt-3);
+}
+.hero-meta .hm-item b {
+  font-weight: 500;
+}
+.hero-scroll {
+  position: absolute;
+  bottom: clamp(24px, 4vh, 44px);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 10px;
+  letter-spacing: 0.3em;
+  color: var(--txt-3);
+}
+.scroll-line {
+  position: relative;
+  width: 64px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.14);
+  overflow: hidden;
+}
+.scroll-line i {
+  position: absolute;
+  inset: 0;
+  background: var(--green);
+  animation: scroll-hint 2.2s var(--ease-io) infinite;
+}
+@keyframes scroll-hint {
+  0% { transform: translateX(-100%); }
+  55% { transform: translateX(0); }
+  100% { transform: translateX(100%); }
+}
+
+/* ---------- 跑马灯 ---------- */
+.marquee {
+  position: relative;
+  z-index: 4;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: var(--bg-2);
+  overflow: hidden;
+  padding: 18px 0;
+}
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 36s linear infinite;
+}
+.marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+.mq-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 28px;
+  padding-right: 28px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--txt-2);
+  white-space: nowrap;
+}
+.mq-item::after {
+  content: '✦';
+  color: var(--green);
+  font-size: 11px;
+}
+@keyframes marquee {
+  to { transform: translateX(-50%); }
+}

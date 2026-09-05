@@ -1,0 +1,25 @@
+{
+  "name": "shen-website",
+  "private": true,
+  "version": "2.7.0",
+  "type": "module",
+  "description": "禹尧珅 · SHEN-OS — 极客风个人主页 (three.js + GSAP + Lenis)",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@fontsource-variable/jetbrains-mono": "^5.1.0",
+    "@fontsource-variable/noto-sans-sc": "^5.1.0",
+    "@fontsource-variable/space-grotesk": "^5.1.0",
+    "gsap": "^3.12.5",
+    "lenis": "^1.1.14",
+    "three": "^0.169.0"
+  },
+  "devDependencies": {
+    "puppeteer-core": "^25.9.0",
+    "sharp": "^0.35.4",
+    "vite": "^5.4.8"
+  }
+}
