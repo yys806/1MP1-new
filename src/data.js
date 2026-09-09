@@ -51,7 +51,7 @@ export const PROFILE = {
 
 export const STATS = [
   { value: '3', label: '研究项目', labelEn: 'Research', suffix: 'RESEARCH' },
-  { value: '24', label: '项目工程', labelEn: 'Projects', suffix: 'PROJECTS' },
+  { value: '25', label: '项目工程', labelEn: 'Projects', suffix: 'PROJECTS' },
   { value: '12', label: '奖项荣誉', labelEn: 'Awards', suffix: 'AWARDS' },
   { value: '2', label: '软件著作权', labelEn: 'Copyrights', suffix: 'COPYRIGHTS' },
 ];
@@ -185,9 +185,29 @@ export const RESEARCH = [
 // FEATURED_ORDER: 精选画廊顺序；group: web|course|campus|other
 // copyright: 有软著；details: 详情（弹窗）；en: { excerpt, details }
 
-export const FEATURED_ORDER = ['mirror-room', 'luxiaoji', 'shen-ppt', 'shenyu', 'mathsnap', 'cyber-oracle'];
+export const FEATURED_ORDER = ['mirror-room', 'luxiaoji', 'leoai-studio', 'shen-ppt', 'shenyu', 'mathsnap', 'cyber-oracle'];
 
 export const PROJECTS = [
+  {
+    id: 'leoai-studio',
+    title: 'LeoAI 造物局',
+    zh: 'AI 服务接单平台',
+    group: 'web',
+    featured: true,
+    date: '2026.09',
+    excerpt: '闲鱼接单的官方门户：AI 画图 / AI 代问 / PPT 代做 / 网页小程序开发 / 服务部署，一站式在线下单与订单流水线。把想法，造出来。',
+    details:
+      'LeoAI 造物局是闲鱼 AI 技术服务的线上门户：四层服务矩阵（AI 视觉与品牌内容、PPT/文档/科研表达、网站/小程序/软件开发、自动化/部署/定制）12 项明码标价服务，Q 版 IP 卡牌式商品目录 + Three.js 首屏。用户在线提交需求、查看订单状态流水线，后台支持建单/账单管理，分阶段收款透明可控。',
+    tags: ['闲鱼接单', 'Next.js 16', 'React 19', 'Three.js'],
+    image: 'assets/img/projects-unified/LeoAI造物局.webp',
+    links: [{ label: 'Website', url: 'https://leoai.cc.cd' }],
+    en: {
+      excerpt: 'The official storefront for my freelance AI services: AI image, PPT, web/mini-program dev, deployment — order online, track progress.',
+      details:
+        "LeoAI Studio is the online storefront for my freelance AI-tech services: a four-layer service matrix (AI visual & brand content, PPT/documents/research expression, web/mini-program/software development, automation/deployment/custom work) with 12 priced services, Q-version IP card catalog, and a Three.js hero. Clients submit requests online, track order pipelines, and pay in stages; the admin panel supports order and billing management.",
+      tags: ['Freelance Platform', 'Next.js 16', 'React 19', 'Three.js']
+    },
+  },
   {
     id: 'luxiaoji',
     title: '噜小记',
@@ -755,6 +775,14 @@ export const HONORS = [
 
 export const CHANGELOG = [
   {
+    version: 'v2.7.1',
+    date: '2026.09',
+    hash: '510153e',
+    tag: 'FEATURE',
+    items: ['LeoAI 造物局上线：AI 视觉 / PPT 文档 / 网站开发 / 自动化部署一站式接单平台（Next.js + Supabase）'],
+    en: { items: ['LeoAI Studio launched — one-stop AI visual / PPT / web dev / automation service platform (Next.js + Supabase)'] },
+  },
+  {
     version: 'v2.7.0',
     date: '2026.08',
     hash: 'c8f21a4',
@@ -841,7 +869,7 @@ export const UI = {
   'hero.m2': { zh: 'ROLE · AI RESEARCHER', en: 'ROLE · AI RESEARCHER' },
   'hero.m3': { zh: 'STATUS · <b class="green">UNDERGRAD@TONGJI</b>', en: 'STATUS · <b class="green">PHD-OFFER@PKU</b>' },
   'gallery.hint': { zh: '// 左右拖动浏览精选 · 滚轮可直接下滑 FEATURED', en: '// DRAG TO BROWSE FEATURED · SCROLL PASSES THROUGH' },
-  'projects.label': { zh: '// 完整索引 FULL INDEX — <span id="proj-total">24</span> RECORDS', en: '// FULL INDEX — <span id="proj-total">24</span> RECORDS' },
+  'projects.label': { zh: '// 完整索引 FULL INDEX — <span id="proj-total">25</span> RECORDS', en: '// FULL INDEX — <span id="proj-total">25</span> RECORDS' },
   'research.outcomes': { zh: '// OUTCOMES · 成果', en: '// OUTCOMES' },
   'research.cite': { zh: '引用 BibTeX', en: 'Cite BibTeX' },
   'honors.label': { zh: '// HONORS.LOG — 荣誉与奖项', en: '// HONORS.LOG — honors & awards' },
@@ -858,7 +886,7 @@ export const UI = {
   'research.title': { zh: '研究', en: 'RESEARCH' },
   'research.sub': { zh: '把未知拆成可计算的问题。', en: 'Decomposing the unknown into computable problems.' },
   'projects.title': { zh: '项目', en: 'PROJECTS' },
-  'projects.sub': { zh: '24 个工程——从论文代码到机器狗。', en: '24 projects — from paper code to a robot dog.' },
+  'projects.sub': { zh: '25 个工程——从论文代码到接单平台。', en: '25 projects — from paper code to a freelance platform.' },
   'journey.title': { zh: '轨迹', en: 'JOURNEY' },
   'journey.sub': { zh: '一条仍在编译的时间线。', en: 'A timeline that is still compiling.' },
   'changelog.title': { zh: '更新日志', en: 'CHANGELOG' },
