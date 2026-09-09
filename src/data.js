@@ -200,7 +200,10 @@ export const PROJECTS = [
       'LeoAI 造物局是闲鱼 AI 技术服务的线上门户：四层服务矩阵（AI 视觉与品牌内容、PPT/文档/科研表达、网站/小程序/软件开发、自动化/部署/定制）12 项明码标价服务，Q 版 IP 卡牌式商品目录 + Three.js 首屏。用户在线提交需求、查看订单状态流水线，后台支持建单/账单管理，分阶段收款透明可控。',
     tags: ['闲鱼接单', 'Next.js 16', 'React 19', 'Three.js'],
     image: 'assets/img/projects-unified/LeoAI造物局.webp',
-    links: [{ label: 'Website', url: 'https://leoai.cc.cd' }],
+    links: [
+      { label: 'Website', url: 'https://leoai.cc.cd' },
+      { label: 'GitHub', url: 'https://github.com/yys806/leoai-website' },
+    ],
     en: {
       excerpt: 'The official storefront for my freelance AI services: AI image, PPT, web/mini-program dev, deployment — order online, track progress.',
       details:
