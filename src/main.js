@@ -83,14 +83,14 @@ function renderAbout() {
         ['school', 'AI undergrad @ Tongji University'],
         ['gpa', '4.80 / 5.0 · Rank 1/47'],
         ['focus', 'traffic-diffusion · VLM-eval · world-models'],
-        ['status', 'PhD offer @ PKU · Signal & Information Processing'],
+        ['status', 'PhD-0 @ PKU · Signal & Information Processing'],
       ]
     : [
         ['name', '禹尧珅 · Yaoshen Yu'],
         ['school', 'AI undergrad @ Tongji University'],
         ['gpa', '4.80 / 5.0 · Rank 1/47'],
         ['focus', 'traffic-diffusion · VLM-eval · world-models'],
-        ['status', 'PhD offer @ PKU · 信号与信息处理'],
+        ['status', '博0 @ PKU · 信号与信息处理'],
       ];
   $('.whoami-body').innerHTML =
     `<span class="cmd">whoami</span>\n` +
@@ -104,7 +104,7 @@ function renderAbout() {
         ['ACADEMICS', 'GPA 4.80 / 5.0', 'Rank 1 / 47'],
         ['INTERNSHIPS', 'PKU PCNI × Tsinghua SIGS', 'Research intern · 2026.03—'],
         ['RESEARCH', 'Traffic / VLM / World models', 'First-author paper @ IEEE TITS (under review)'],
-        ['OFFER', 'PKU School of Electronics · PhD', 'Signal & Information Processing · 2026.07'],
+        ['PHD-0', 'PKU School of Electronics · PhD-0', 'Signal & Information Processing · 2027 cohort'],
         ['LOCATION', PROFILE.locationEn, 'UTC+8 · Shanghai'],
       ]
     : [
@@ -112,7 +112,7 @@ function renderAbout() {
         ['ACADEMICS', 'GPA 4.80 / 5.0', '专业排名 1 / 47'],
         ['INTERNSHIPS', '北大 PCNI × 清华 SIGS', '科研实习 · 2026.03—'],
         ['RESEARCH', '交通生成 / VLM / 世界模型', '一作论文在投 IEEE TITS'],
-        ['OFFER', '北大电子学院 直博', '信号与信息处理 · 2026.07 夏令营'],
+        ['PHD-0', '北大电子学院 · 博0', '信号与信息处理 · 2027 级直博'],
         ['LOCATION', PROFILE.location, 'UTC+8 · Shanghai'],
       ];
   $('#facts').innerHTML = facts
@@ -231,7 +231,7 @@ function renderProjects() {
 }
 
 function renderJourney() {
-  const KIND_TXT = { edu: 'EDU', award: 'AWARD', work: 'WORK', research: 'RESEARCH', offer: 'OFFER' };
+  const KIND_TXT = { edu: 'EDU', award: 'AWARD', work: 'WORK', research: 'RESEARCH', offer: 'PHD-0' };
   $('#timeline').innerHTML = TIMELINE.map(
     (ti) => `
   <div class="t-item">

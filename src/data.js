@@ -109,16 +109,20 @@ export const RESEARCH = [
     venue: '清华大学深圳国际研究生院 · 科研实习',
     date: '2026.03 — 至今',
     advisor: '指导：陈鑫磊 教授课题组',
-    tags: ['科研实习', 'VLM 评测', '视觉定位', '反事实诊断', '代码开源'],
+    tags: ['科研实习', 'VLM 评测', '视觉定位', '反事实诊断', '论文 OpenReview', '代码开源'],
     desc: '研究视觉语言模型如何理解交通场景：从驾驶与航拍数据构建 VQA 评测样例，在受控视觉变化下评估模型回答，对比反事实编辑前后的归因与显著性信号——判断模型的答案究竟由目标车辆支撑，还是被背景、上下文捷径等伪相关视觉证据带偏。',
     outputs: [
+      '论文《Spatial Bias in Vision Language Models》上线 OpenReview（交通场景 VLM 空间偏差分析）',
       '构建交通场景 VQA 评测流水线（驾驶 / 航拍双视角数据）',
       '验证反事实编辑下的视觉证据偏移，形成偏差诊断方法',
       '评测与诊断代码开源（traffic-vlm-eval-bias-analysis）',
     ],
     image: 'assets/img/research/traffic-vlm-attention.webp',
     imageAlt: '交通 VLM 反事实编辑前后显著性对比',
-    links: [{ label: '代码 Code', url: 'https://github.com/yys806/traffic-vlm-eval-bias-analysis' }],
+    links: [
+      { label: '论文 Paper', url: 'https://openreview.net/forum?id=dQF4SKZs0i' },
+      { label: '代码 Code', url: 'https://github.com/yys806/traffic-vlm-eval-bias-analysis' },
+    ],
     bibtex: `@misc{yu2026trafficvlm,
   title        = {Traffic-Scene VLM Evaluation and Bias Diagnostics},
   author       = {Yu, Yaoshen},
@@ -131,9 +135,10 @@ export const RESEARCH = [
       venue: 'Research internship · Tsinghua SIGS',
       date: '2026.03 — Present',
       advisor: "Advisor: Prof. Xinlei Chen's group",
-      tags: ['Research Internship', 'VLM Evaluation', 'Visual Grounding', 'Counterfactual Diagnostics', 'Open Source'],
+      tags: ['Research Internship', 'VLM Evaluation', 'Visual Grounding', 'Counterfactual Diagnostics', 'Paper on OpenReview', 'Open Source'],
       desc: 'How do vision-language models understand traffic scenes? I build VQA evaluation cases from driving and aerial-view datasets, evaluate model answers under controlled visual changes, and compare attribution and saliency signals before and after counterfactual editing — diagnosing whether an answer is truly supported by the queried vehicle or driven by background context and spurious shortcuts.',
       outputs: [
+        'Paper "Spatial Bias in Vision Language Models" released on OpenReview',
         'Built a traffic-scene VQA evaluation pipeline (driving + aerial views)',
         'Validated counterfactual evidence-shift diagnostics for VLM bias',
         'Evaluation code open-sourced (traffic-vlm-eval-bias-analysis)',
@@ -745,11 +750,19 @@ export const TIMELINE = [
   },
   {
     year: '2026.07',
-    title: '北大电子学院夏令营 · 直博 Offer',
+    title: '北大电子学院夏令营 · 获直博资格',
     org: 'Peking University · 信号与信息处理',
     desc: '参加北京大学电子学院优秀大学生夏令营，获得信号与信息处理专业直博资格。',
     kind: 'offer',
-    en: { title: 'PKU SEE Summer Camp · PhD Offer', org: 'Peking University · Signal & Information Processing', desc: 'Attended the PKU School of Electronics summer camp and received a direct-PhD offer in Signal & Information Processing.' },
+    en: { title: 'PKU SEE Summer Camp · direct-PhD qualification', org: 'Peking University · Signal & Information Processing', desc: 'Attended the PKU School of Electronics summer camp and earned a direct-PhD place in Signal & Information Processing.' },
+  },
+  {
+    year: '2026.09',
+    title: '北大电子学院 · 博0',
+    org: 'Peking University · 信号与信息处理（直博）',
+    desc: '推免待录取确认，正式进入博 0 —— 2027 级直博生。',
+    kind: 'offer',
+    en: { title: 'PKU School of Electronics · PhD-0', org: 'Peking University · Signal & Information Processing (direct-PhD)', desc: 'Admission confirmed — officially a PhD-0, incoming direct-PhD student of the 2027 cohort.' },
   },
 ];
 
@@ -778,6 +791,14 @@ export const HONORS = [
 
 export const CHANGELOG = [
   {
+    version: 'v2.8.0',
+    date: '2026.09',
+    hash: 'HASHPLACEHOLDER',
+    tag: 'RELEASE',
+    items: ['北大电子学院直博待录取确认 · 进入博0（2027 级）', '论文《Spatial Bias in Vision Language Models》上线 OpenReview'],
+    en: { items: ['PKU School of Electronics admission confirmed — now a PhD-0 (2027 cohort)', 'Paper "Spatial Bias in Vision Language Models" released on OpenReview'] },
+  },
+  {
     version: 'v2.7.1',
     date: '2026.09',
     hash: '510153e',
@@ -790,8 +811,8 @@ export const CHANGELOG = [
     date: '2026.08',
     hash: 'c8f21a4',
     tag: 'RELEASE',
-    items: ['获得北京大学电子学院夏令营直博 offer（信号与信息处理）', '论文 DRIFT 投稿 IEEE TITS，进入审稿流程'],
-    en: { items: ['Direct-PhD offer from the PKU School of Electronics summer camp (Signal & Information Processing)', 'DRIFT paper submitted to IEEE TITS — now under review'] },
+    items: ['获得北京大学电子学院夏令营直博资格（信号与信息处理）', '论文 DRIFT 投稿 IEEE TITS，进入审稿流程'],
+    en: { items: ['Earned a direct-PhD place at the PKU School of Electronics summer camp (Signal & Information Processing)', 'DRIFT paper submitted to IEEE TITS — now under review'] },
   },
   {
     version: 'v2.6.2',
@@ -870,7 +891,7 @@ export const UI = {
   'hero.cta2': { zh: '下载 CV', en: 'DOWNLOAD CV' },
   'hero.m1': { zh: 'LOC · 上海 / 云南', en: 'LOC · Shanghai / Yunnan' },
   'hero.m2': { zh: 'ROLE · AI RESEARCHER', en: 'ROLE · AI RESEARCHER' },
-  'hero.m3': { zh: 'STATUS · <b class="green">UNDERGRAD@TONGJI</b>', en: 'STATUS · <b class="green">PHD-OFFER@PKU</b>' },
+  'hero.m3': { zh: 'STATUS · <b class="green">UNDERGRAD@TONGJI</b>', en: 'STATUS · <b class="green">PHD-0@PKU</b>' },
   'gallery.hint': { zh: '// 左右拖动浏览精选 · 滚轮可直接下滑 FEATURED', en: '// DRAG TO BROWSE FEATURED · SCROLL PASSES THROUGH' },
   'projects.label': { zh: '// 完整索引 FULL INDEX — <span id="proj-total">25</span> RECORDS', en: '// FULL INDEX — <span id="proj-total">25</span> RECORDS' },
   'research.outcomes': { zh: '// OUTCOMES · 成果', en: '// OUTCOMES' },
