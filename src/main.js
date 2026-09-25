@@ -20,6 +20,7 @@ import {
   PROJECT_GROUPS,
   FEATURED_ORDER,
   TIMELINE,
+  DOCS,
   HONORS,
   CHANGELOG,
   SECTIONS,
@@ -83,6 +84,7 @@ function renderAbout() {
         ['school', 'AI undergrad @ Tongji University'],
         ['gpa', '4.80 / 5.0 · Rank 1/47'],
         ['focus', 'traffic-diffusion · VLM-eval · world-models'],
+        ['english', 'CET-4 631 · CET-6 582'],
         ['status', 'PhD-0 @ PKU · Signal & Information Processing'],
       ]
     : [
@@ -90,6 +92,7 @@ function renderAbout() {
         ['school', 'AI undergrad @ Tongji University'],
         ['gpa', '4.80 / 5.0 · Rank 1/47'],
         ['focus', 'traffic-diffusion · VLM-eval · world-models'],
+        ['english', 'CET-4 631 · CET-6 582'],
         ['status', '博0 @ PKU · 信号与信息处理'],
       ];
   $('.whoami-body').innerHTML =
@@ -101,7 +104,8 @@ function renderAbout() {
   const facts = LANG === 'en'
     ? [
         ['EDUCATION', 'Tongji University', 'B.Eng. in AI · 2023—'],
-        ['ACADEMICS', 'GPA 4.80 / 5.0', 'Rank 1 / 47'],
+        ['ACADEMICS', 'GPA 4.80 / 5.0 · 92.96/100', 'Rank 1 / 47 · top 2.13%'],
+        ['LANGUAGE', 'CET-4 631 · CET-6 582', 'English proficiency'],
         ['INTERNSHIPS', 'PKU PCNI × Tsinghua SIGS', 'Research intern · 2026.03—'],
         ['RESEARCH', 'Traffic / VLM / World models', 'First-author paper @ IEEE TITS (under review)'],
         ['PHD-0', 'PKU School of Electronics · PhD-0', 'Signal & Information Processing · 2027 cohort'],
@@ -109,7 +113,8 @@ function renderAbout() {
       ]
     : [
         ['EDUCATION', '同济大学', '人工智能 · 工学本科 · 2023—'],
-        ['ACADEMICS', 'GPA 4.80 / 5.0', '专业排名 1 / 47'],
+        ['ACADEMICS', 'GPA 4.80 / 5.0 · 百分制 92.96', '专业排名 1 / 47 · 前 2.13%'],
+        ['LANGUAGE', 'CET-4 631 · CET-6 582', '英语水平'],
         ['INTERNSHIPS', '北大 PCNI × 清华 SIGS', '科研实习 · 2026.03—'],
         ['RESEARCH', '交通生成 / VLM / 世界模型', '一作论文在投 IEEE TITS'],
         ['PHD-0', '北大电子学院 · 博0', '信号与信息处理 · 2027 级直博'],
@@ -122,6 +127,15 @@ function renderAbout() {
   $('#interests').innerHTML = (LANG === 'en' ? PROFILE.interestsEn : PROFILE.interests)
     .map((i) => `<span class="chip">${i}</span>`)
     .join('');
+
+  const docsTitle = $('#docs-title');
+  const docsLinks = $('#docs-links');
+  if (docsTitle) docsTitle.textContent = t('docs.label');
+  if (docsLinks) {
+    docsLinks.innerHTML = DOCS.map(
+      (d) => `<a class="rlink" href="${d.url}" target="_blank" rel="noopener">${LANG === 'en' ? d.label.en : d.label.zh}</a>`
+    ).join('');
+  }
 
   $('#stats').innerHTML = STATS.map(
     (s) =>

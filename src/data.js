@@ -733,6 +733,14 @@ export const TIMELINE = [
     en: { title: 'DRIFT · First author', org: 'Tongji University · advised by Prof. Minghui Liwang', desc: 'Started mixed-autonomy traffic generation research; paper on arXiv:2606.16589, now under review at IEEE TITS. Also won a National First Prize at the Global Campus AI Algorithm Competition.' },
   },
   {
+    year: '2025.12',
+    title: 'AIC 全国一等奖 · 校级三等奖学金',
+    org: '第七届全球校园人工智能算法精英大赛 · 同济大学',
+    desc: '获第七届全球校园人工智能算法精英大赛全国一等奖；同年获 2024-2025 学年同济大学本科优秀学生奖学金（校级三等奖）。',
+    kind: 'award',
+    en: { title: 'AIC National First Prize · University Scholarship', org: '7th Global Campus AI Algorithm Elite Competition · Tongji University', desc: 'Won the National First Prize at the 7th Global Campus AI Algorithm Elite Competition, and the Tongji Outstanding Student Scholarship (third class) for the 2024-2025 academic year.' },
+  },
+  {
     year: '2026.03',
     title: '北大 PCNI × 清华 SIGS 双线科研',
     org: 'Peking University · Tsinghua SIGS',
@@ -772,6 +780,16 @@ export const TIMELINE = [
 const AWARD = 'https://pub-fae7c18af59f40679cbe76ee23a170c8.r2.dev/%E8%8E%B7%E5%A5%96';
 // 新证书所在桶（hermes）与旧获奖桶不同域，单独用一个常量
 const ALT = 'https://pub-d6c0e9b0fafc46b5982d5d77ab5e4471.r2.dev/%E8%8E%B7%E5%A5%96';
+
+// ---------------- 证明材料 DOCUMENTS ----------------
+// 排名证明 / 英语四六级 / 在读证明（上传于 hermes 桶）
+
+export const DOCS = [
+  { label: { zh: '成绩排名证明（1/47 · 前 2.13%）', en: 'Rank Certificate · 1/47 (top 2.13%)' }, url: 'https://pub-d6c0e9b0fafc46b5982d5d77ab5e4471.r2.dev/%E8%AF%81%E6%98%8E/%E6%8E%92%E5%90%8D%E8%AF%81%E6%98%8E_2026-07-12.pdf' },
+  { label: { zh: '英语六级 CET-6 582', en: 'CET-6 · 582' }, url: 'https://pub-d6c0e9b0fafc46b5982d5d77ab5e4471.r2.dev/%E8%AF%81%E6%98%8E/%E8%8B%B1%E8%AF%AD%E5%85%AD%E7%BA%A7_CET6-582.pdf' },
+  { label: { zh: '英语四级 CET-4 631', en: 'CET-4 · 631' }, url: 'https://pub-d6c0e9b0fafc46b5982d5d77ab5e4471.r2.dev/%E8%AF%81%E6%98%8E/%E8%8B%B1%E8%AF%AD%E5%9B%9B%E7%BA%A7_CET4-631.pdf' },
+  { label: { zh: '在读证明', en: 'Enrollment Certificate' }, url: 'https://pub-d6c0e9b0fafc46b5982d5d77ab5e4471.r2.dev/%E8%AF%81%E6%98%8E/%E5%9C%A8%E8%AF%BB%E8%AF%81%E6%98%8E_2026-07-01.pdf' },
+];
 
 export const HONORS = [
   { year: '2025.12', name: '全球校园人工智能算法精英大赛', level: '国家一等奖', hot: true, file: `${AWARD}/2025-2026/AIC-%E5%9B%BD%E4%B8%80.pdf`, en: { name: 'Global Campus AI Algorithm Elite Competition', level: 'National First Prize' } },
@@ -899,6 +917,7 @@ export const UI = {
   'projects.label': { zh: '// 完整索引 FULL INDEX — <span id="proj-total">25</span> RECORDS', en: '// FULL INDEX — <span id="proj-total">25</span> RECORDS' },
   'research.outcomes': { zh: '// OUTCOMES · 成果', en: '// OUTCOMES' },
   'research.cite': { zh: '引用 BibTeX', en: 'Cite BibTeX' },
+  'docs.label': { zh: '// DOCS — 证明材料', en: '// DOCS — certificates & proof' },
   'honors.label': { zh: '// HONORS.LOG — 荣誉与奖项', en: '// HONORS.LOG — honors & awards' },
   'honors.file': { zh: '证书 ↗', en: 'CERT ↗' },
   'modal.updated': { zh: '更新于', en: 'UPDATED' },

@@ -448,3 +448,19 @@
   color: var(--green);
   transform: translateY(-2px);
 }
+
+/* 证明材料区（2026-09-25 新增：排名证明 / 英语四六级 / 在读证明） */
+.docs-block {
+  margin-top: 18px;
+}
+.docs-title {
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  color: var(--muted, #8a8a8a);
+  margin-bottom: 10px;
+}
+.rlinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
