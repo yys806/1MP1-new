@@ -793,7 +793,7 @@ export const CHANGELOG = [
   {
     version: 'v2.8.0',
     date: '2026.09',
-    hash: 'HASHPLACEHOLDER',
+    hash: '7641a89',
     tag: 'RELEASE',
     items: ['北大电子学院直博待录取确认 · 进入博0（2027 级）', '论文《Spatial Bias in Vision Language Models》上线 OpenReview'],
     en: { items: ['PKU School of Electronics admission confirmed — now a PhD-0 (2027 cohort)', 'Paper "Spatial Bias in Vision Language Models" released on OpenReview'] },
