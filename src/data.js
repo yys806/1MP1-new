@@ -770,9 +770,12 @@ export const TIMELINE = [
 // file: 证书公网链接（R2 对象存储）
 
 const AWARD = 'https://pub-fae7c18af59f40679cbe76ee23a170c8.r2.dev/%E8%8E%B7%E5%A5%96';
+// 新证书所在桶（hermes）与旧获奖桶不同域，单独用一个常量
+const ALT = 'https://pub-d6c0e9b0fafc46b5982d5d77ab5e4471.r2.dev/%E8%8E%B7%E5%A5%96';
 
 export const HONORS = [
   { year: '2025.12', name: '全球校园人工智能算法精英大赛', level: '国家一等奖', hot: true, file: `${AWARD}/2025-2026/AIC-%E5%9B%BD%E4%B8%80.pdf`, en: { name: 'Global Campus AI Algorithm Elite Competition', level: 'National First Prize' } },
+  { year: '2025.12', name: '同济大学本科优秀学生奖学金（校级三等奖）', level: '2024-2025 学年', file: `{ALT}/2024-2025/2025-tongji-scholarship-third.pdf`, en: { name: 'Tongji Outstanding Student Scholarship (Third Class)', level: '2024-2025 academic year' } },
   { year: '2024', name: '国家奖学金', level: 'Top 0.2% · ¥10,000', hot: true, file: `${AWARD}/2023-2024/%E5%9B%BD%E5%A5%96.jpg`, en: { name: 'National Scholarship', level: 'Top 0.2% · ¥10,000' } },
   { year: '2025', name: '全国大学生数学建模竞赛', level: '上海市二等奖', file: `${AWARD}/2025-2026/%E6%95%B0%E6%A8%A1%E5%9B%BD%E8%B5%9B%E7%9C%81%E4%BA%8C.jpg`, en: { name: 'China National Mathematical Modeling Contest', level: 'Shanghai 2nd Prize' } },
   { year: '2025.08', name: '第六届华数杯数学建模竞赛', level: '国家三等奖', file: `${AWARD}/2024-2025/2025%E5%8D%8E%E6%95%B0%E6%9D%AF.pdf`, en: { name: '6th Huashu Cup Mathematical Modeling', level: 'National 3rd Prize' } },
