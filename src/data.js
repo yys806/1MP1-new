@@ -194,6 +194,28 @@ export const FEATURED_ORDER = ['mirror-room', 'luxiaoji', 'leoai-studio', 'shen-
 
 export const PROJECTS = [
   {
+    id: 'hermes-park',
+    title: 'Hermes 可视化园区',
+    zh: '把整套 Agent 体系画成一座 3D 园区',
+    group: 'web',
+    featured: true,
+    date: '2026.10',
+    excerpt:
+      '一中心·八大分区·三大 Agent：中央是 Hermes 智能大脑，外围环绕学习科研、日常事务、家人事务、通知待办、奇思妙想、咨询新闻、资产管理、彩虹事务八个分区，Claude Code / Codex / Pi 各占独立地块，任务进度直接读本机真实状态。',
+    details:
+      'Hermes 可视化园区把日常运行的整套 agent 体系变成一座可以漫游的 3D 沙盘：中央大厅承载「Hermes 智能大脑」，八块功能地分别对应学习科研、日常事务、家人事务、通知待办、奇思妙想、咨询新闻、资产管理、彩虹事务；园区外另设 Claude Code、Codex、Pi 三个外协 Agent 地块，常驻管家与外协分工一眼可辨。场景在 Blender 中建模并导出 glTF，用 three.js 实时渲染，支持四季与天气变化、随北京时间走的昼夜灯光、任意工作流一键聚焦与实时进度追踪；更关键的是各分区状态直接读取本机 state.db 的真实数据，不是写死的演示动画。整套场景遵守固定规范（16×16 功能地块、25×25 中央大厅、统一传送带尺寸、250+ 网格小件、灯只灯罩发光），新增分区也能融进同一个世界；性能上做过结构保真压缩，空闲时降帧到 8fps。',
+    tags: ['Three.js', 'Blender glTF', '3D 可视化', '数据驱动'],
+    image: 'assets/img/projects-unified/Hermes园区.webp',
+    links: [{ label: 'GitHub', url: 'https://github.com/yys806/hermes-park' }],
+    en: {
+      excerpt:
+        'One brain, eight zones, three agents: a navigable 3D campus that renders my whole agent system, with task state read from real local data.',
+      details:
+        'The Hermes Visualized Campus turns the running agent system into a 3D sandbox you can walk through: a central hall holds the Hermes brain, eight plots cover learning & research, daily affairs, family, notifications & todos, side ideas, news, asset management and Rainbow, while Claude Code, Codex and Pi each own an outlying plot so the split between the resident assistant and external agents is immediately legible. Modeled in Blender and exported to glTF, rendered live with three.js: seasonal and weather change, day/night lighting driven by local time, one-click focus on any workflow and a live progress tracker. Zone status is read from the real local state.db rather than scripted animation. The scene follows a fixed specification (16×16 plots, a 25×25 central hall, unified conveyor geometry, 250+ props) so new zones fit the same world, with structural-faithful compression and an idle drop to 8fps.',
+      tags: ['Three.js', 'Blender glTF', '3D Visualization', 'Data-driven'],
+    },
+  },
+  {
     id: 'leoai-studio',
     title: 'LeoAI 造物局',
     zh: 'AI 服务接单平台',
